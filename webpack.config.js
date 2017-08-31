@@ -3,12 +3,11 @@
  */
 
 const webpack = require('webpack');
-var ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 const path = require('path');
 const root = path.resolve(__dirname, '');
-const srcBase = path.resolve(__dirname, 'src');
-const buildBase = path.resolve(__dirname, 'build');
+const srcBase = path.resolve(__dirname, 'frontend');
+const buildBase = path.resolve(__dirname, 'server/public/build');
 
 module.exports = {
     entry: {

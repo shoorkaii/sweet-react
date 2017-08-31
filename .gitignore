@@ -151,7 +151,7 @@ coverage
 .lock-wscript
 
 # Compiled binary addons (http://nodejs.org/api/addons.html)
-server/build/Release
+server/public/Release
 
 # Dependency directories
 node_modules
@@ -172,4 +172,4 @@ jspm_packages
 # Yarn Integrity file
 .yarn-integrity
 
-server/build/*.js
+server/public/*.js

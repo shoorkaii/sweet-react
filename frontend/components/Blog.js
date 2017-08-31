@@ -13,7 +13,7 @@ class Blog extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            blogPosts: null
+            blogPosts: []
         };
     }
 
@@ -24,8 +24,8 @@ class Blog extends React.Component {
     render() {
         return (
             <div className="homepage">
-                {this.state.blogPosts.map((p, i) =>
-                    <Post key={i} post={p}/>
+                {this.props.blogPosts.map((p, i) =>
+                    <Post key={p.created} post={p}/>
                 )}
 
             </div>
