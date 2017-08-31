@@ -1,10 +1,11 @@
 var express = require('express');
 var app = express();
+var path = require('path');
 
 var PORT = process.env.port || 3000;
 
 app.get('/', function (req, res) {
-    res.send({message: 'Hooray! welcome to sweet-react!'});
+    res.sendFile(path.resolve(__dirname, './index.html'));
 });
 
 app.listen(PORT, function () {
