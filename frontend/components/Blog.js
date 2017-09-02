@@ -23,7 +23,7 @@ class Blog extends React.Component {
 
     render() {
         return (
-            <div className="homepage">
+            <div className="blog">
                 {this.props.blogPosts.map((p, i) =>
                     <Post key={p.created} post={p}/>
                 )}

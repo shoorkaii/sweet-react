@@ -1,8 +1,65 @@
 html, body {
-  background-color: #d4d4cb;
+  background-color: #fafafa;
   width: 100%;
   height: 100%;
   margin: 0;
   padding: 0;
   display: block;
+  font-family: Roboto;
+}
+
+body {
+
+  .blog {
+    &, * {
+      -webkit-box-align: stretch;
+      -webkit-align-items: stretch;
+      -ms-flex-align: stretch;
+      align-items: stretch;
+      border: 0 solid #000;
+      -webkit-box-sizing: border-box;
+      box-sizing: border-box;
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      -webkit-flex-shrink: 0;
+      -ms-flex-negative: 0;
+      flex-shrink: 0;
+      margin: 0;
+      padding: 0;
+      position: relative;
+    }
+
+    .post {
+      background-color: #fff;
+      border: 1px solid #e6e6e6;
+      border-radius: 3px;
+      margin-left: -1px;
+      margin-right: -1px;
+      width: 40rem;
+      align-self: center;
+      height: 17rem;
+      margin-bottom: 1rem;
+
+      img {
+        align-self: flex-start;
+        height: 17rem;
+        width: 17rem;
+      }
+
+      .info {
+        align-self: flex-end;
+        height: 17rem;
+        width: calc(100% - 18rem);
+        position: absolute;
+        top: 1rem;
+      }
+    }
+  }
 }

@@ -20087,7 +20087,6 @@ var fetchBlogPosts = exports.fetchBlogPosts = function fetchBlogPosts() {
     return function (dispatch) {
         (0, _utils.setAxiosHeader)();
         return _axios2.default.get(baseApiUrl.getPostsUrl).then(function (response) {
-            console.log(response.data);
             dispatch(fetchBlogPostsSuccess(response.data));
         }).catch(function (error) {
             throw error;
@@ -20105,7 +20104,7 @@ var fetchBlogPosts = exports.fetchBlogPosts = function fetchBlogPosts() {
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-var getPostsUrl = exports.getPostsUrl = 'https://api.backendless.com/2D7E4E23-B24F-3D66-FF0C-D44240473800/89E9EF38-4160-3FF5-FFD5-6CD6CD1B9B00/data/Post';
+var getPostsUrl = exports.getPostsUrl = 'https://api.backendless.com/2D7E4E23-B24F-3D66-FF0C-D44240473800/89E9EF38-4160-3FF5-FFD5-6CD6CD1B9B00/data/Posts';
 
 /***/ }),
 /* 285 */
@@ -20170,7 +20169,7 @@ var Blog = function (_React$Component) {
         value: function render() {
             return _react2.default.createElement(
                 'div',
-                { className: 'homepage' },
+                { className: 'blog' },
                 this.props.blogPosts.map(function (p, i) {
                     return _react2.default.createElement(_Post2.default, { key: p.created, post: p });
                 })
@@ -20218,10 +20217,20 @@ var Post = function Post(props) {
     return _react2.default.createElement(
         "div",
         { className: "post" },
+        _react2.default.createElement("img", { src: props.post.image }),
         _react2.default.createElement(
             "div",
-            { className: "content" },
-            props.post.message
+            { className: "info" },
+            _react2.default.createElement(
+                "h3",
+                { className: "title" },
+                props.post.title
+            ),
+            _react2.default.createElement(
+                "div",
+                { className: "content" },
+                props.post.content
+            )
         )
     );
 };

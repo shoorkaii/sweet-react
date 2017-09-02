@@ -19,7 +19,6 @@ export const fetchBlogPosts = () => {
         setAxiosHeader();
         return Axios.get(baseApiUrl.getPostsUrl)
             .then(response => {
-                console.log(response.data);
                 dispatch(fetchBlogPostsSuccess(response.data))
             })
             .catch(error => {
