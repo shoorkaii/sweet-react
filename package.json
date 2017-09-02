@@ -1,7 +1,7 @@
 {
   "name": "sweet-react",
   "version": "1.0.0",
-  "description": "",
+  "description": "DRY! web, desktop, ios and android app just using single code base in with react and redux.",
   "main": "index.js",
   "scripts": {
     "server": "node ./server/server.js",
